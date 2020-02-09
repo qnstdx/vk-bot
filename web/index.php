@@ -30,7 +30,7 @@ $app->post('/bot', function() use($app) {
 
 	switch ($data->type) {
 		case 'confirmation':
-			return $conf['VK_SECRET_TOKEN'];
+			return $conf['VK_CONF_CODE'];
 			break;
 		case 'message_new':
 			break;
