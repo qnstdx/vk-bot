@@ -33,6 +33,15 @@ $app->post('/bot', function() use($app) {
 			return $conf['VK_CONF_CODE'];
 			break;
 		case 'message_new':
+			$req_params = [
+				'user_id' => $data->object->user_id,
+				'message' =>'Тест',
+				'access_token' => $conf['VK_TOKEN'],
+				'v' => '5.50'
+			];
+
+			file_get_contents('https://api.vk.com/method/messages.send?'.http_build_query($req_params));
+
 			break;
 	}
 
