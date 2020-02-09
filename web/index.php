@@ -25,7 +25,7 @@ $app->post('/bot', function() use($app) {
 	if (!$data) 
 		return 'no ok';
 
-	if ($data->secret !== $conf['VK_SECRET_TOKEN'] && $data->type !=== 'confirmation')
+	if ($data->secret !== $conf['VK_SECRET_TOKEN'] && $data->type !== 'confirmation')
 		return 'no ok!';
 
 	switch ($data->type) {
@@ -35,7 +35,7 @@ $app->post('/bot', function() use($app) {
 		case 'message_new':
 			break;
 	}
-	
+
 	return 'no ok!'; 
 });
 
