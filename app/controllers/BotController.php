@@ -6,9 +6,9 @@ class BotController
     {
         if ( ! empty ( $_POST ) )
         {
-            return '52503fa1';
+            echo '52503fa1';
         } else {
-            return 'noih';
+            echo 'noih';
         }
 
         return true;
